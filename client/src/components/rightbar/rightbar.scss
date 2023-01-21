@@ -1,0 +1,414 @@
+.righrbar {
+    flex: 3;
+    padding: 1.2em;
+    position: sticky;
+    top: 4.5em;
+    height: calc(100vh - 4.5em);
+    overflow: scroll;
+    background-color: var(--bgSoft);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .container {
+        padding: 1.25em;
+
+        .item {
+            -webkit-box-shadow: var(--rightBarItemWebkitShadow);
+            -moz-box-shadow: var(--rightBarItemMozShadow);
+            box-shadow: var(--rightBarItemShadow);
+            padding: 0.9375em;
+            margin-bottom: 1.25em;
+            border-bottom-left-radius: 1.25em;
+            background-color: var(--bg);
+
+            span {
+                color: gray;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 1em 1em;
+                gap: 1.8em;
+
+                .userInfo {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.2em;
+                    position: relative;
+
+                    img {
+                        width: 3em;
+                        height: 3em;
+                        border-radius: 50%;
+                        border: 2px solid rgba(236, 101, 52, 0.455);
+                        object-fit: cover;
+                        cursor: pointer;
+                    }
+
+                    .online {
+                        width: 0.75em;
+                        height: 0.75em;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 2.5em;
+                        cursor: pointer;
+                        filter: var(--iconShadow);
+                    }
+
+                    p {
+                        color: var(--textColorSoft);
+                    }
+
+                    .span {
+                        color: var(--textColorSoft2);
+                        font-weight: var(--rightBatFW);
+                    }
+                }
+
+                .time {
+                    font-size: 14px;
+                    align-self: right;
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: .9em;
+
+                    button {
+                        border: none;
+                        padding: 0.3125em 0.625em;
+                        color: #fff;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        filter: var(--iconShadow);
+
+                        &:first-child {
+                            background-color: #5271ff;
+                        }
+
+                        &:last-child {
+                            background-color: #f0544f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1590px) {
+    .righrbar {
+        flex: 3.5;
+
+        .container {
+
+            .item {
+
+                .user {
+                    gap: 2em;
+
+                    .userInfo {
+                        gap: 1em;
+
+                        p {
+                            font-size: 13px;
+                            flex-direction: column;
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+
+                    }
+
+                    .time {
+                        font-size: 13px;
+                    }
+
+                    .buttons {
+                        gap: .8em;
+
+                        button {
+                            font-size: 13px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1490px) {
+    .righrbar {
+        flex: 3.5;
+
+        .container {
+
+            .item {
+
+                .user {
+                    gap: 2em;
+
+                    .userInfo {
+                        gap: 1em;
+
+                        p {
+                            font-size: 13px;
+                            flex-direction: column;
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+
+                    }
+
+                    .time {
+                        font-size: 13px;
+                    }
+
+                    .buttons {
+                        gap: .8em;
+
+                        button {
+                            font-size: 13px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1450px) {
+    .righrbar {
+        flex: 3.5;
+
+        .container {
+
+            .item {
+
+                .user {
+                    gap: 2em;
+
+                    .userInfo {
+                        gap: 1em;
+
+                        p {
+                            font-size: 13px;
+                            flex-direction: column;
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+
+                    }
+
+                    .time {
+                        font-size: 13px;
+                    }
+
+                    .buttons {
+                        gap: .8em;
+
+                        button {
+                            font-size: 13px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1350px) {
+    .righrbar {
+        flex: 4;
+
+        .container {
+            padding: 5px;
+
+            .item {
+
+                .user {
+                    gap: 1.5em;
+
+                    .userInfo {
+                        flex-direction: column;
+                        gap: .3em;
+                        align-items: flex-start;
+
+                        p {
+                            font-size: 12px;
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .time {
+                        font-size: 12px;
+                    }
+
+                    .buttons {
+                        button {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .righrbar {
+        flex: 4;
+
+        .container {
+            padding: 5px;
+
+            .item {
+
+                .user {
+                    gap: 2.3em;
+
+                    .userInfo {
+                        flex-direction: column;
+                        gap: .3em;
+
+                        p {
+                            font-size: 12px;
+                        }
+
+                        .online {
+                            display: none;
+                        }
+                    }
+
+                    .buttons {
+
+                        button {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .righrbar {
+        flex: 4;
+
+        .container {
+            padding: 5px;
+
+            .item {
+
+                .user {
+                    gap: 2.3em;
+
+                    .userInfo {
+                        flex-direction: column;
+                        gap: .3em;
+
+                        p {
+                            font-size: 12px;
+                        }
+
+
+                        .online {
+                            display: none;
+                        }
+                    }
+
+                    .buttons {
+                        flex-direction: column;
+
+                        button {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .righrbar {
+        flex: 4;
+
+        .container {
+            padding: 5px;
+
+            .item {
+
+                .user {
+                    gap: 2.3em;
+
+                    .userInfo {
+                        flex-direction: column;
+                        gap: .3em;
+
+                        img {
+                            display: none;
+                        }
+
+                        .online {
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        font-size: 11px;
+                    }
+
+                    .time {
+                        font-size: 11px;
+                    }
+
+                    .buttons {
+                        flex-direction: column;
+
+                        button {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .righrbar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .righrbar {
+        display: none;
+    }
+}
