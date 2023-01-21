@@ -1,0 +1,133 @@
+.stories {
+    display: flex;
+    gap: 1em;
+    height: 15.625em;
+    margin-bottom: 1.875em;
+
+    .story {
+        flex: 1;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.108);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.108);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.491);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.7s ease;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+
+        span {
+            position: absolute;
+            bottom: 0.625em;
+            left: 0.625em;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        button {
+            position: absolute;
+            bottom: 2.5em;
+            left: 0.625em;
+            color: #fff;
+            border: none;
+            background-color: #5271ff;
+            border-radius: 50%;
+            width: 1.5625em;
+            height: 1.5625em;
+            cursor: pointer;
+            font-size: 1.5625em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.705));
+        }
+    }
+
+}
+
+
+@media (max-width: 1340px) {
+    .stories {
+
+        .story {
+
+            span {
+                font-size: .9em;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1240px) {
+    .stories {
+
+        .story {
+
+            span {
+                font-size: .8em;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1140px) {
+    .stories {
+
+        .story {
+
+            span {
+                font-size: .7em;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 960px) {
+    .stories {
+
+        .story {
+
+            span {
+                font-size: .6em;
+                font-weight: 400;
+            }
+
+            button {
+                transform: translate(-50%, -90%);
+                left: 50%;
+                top: 13%;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .stories {
+
+        .story {
+
+            button {
+                transform: translate(-50%, -90%);
+                left: 50%;
+                top: 13%;
+            }
+        }
+
+    }
+}
