@@ -21,7 +21,6 @@ export const Post = ({ post }: PostProps) => {
   const [commentOpen, setCommentOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [commentAmount, setCommentAmount] = useState<number | null>(null);
-  // const [likedAmount, setLikedAmount] = useState<number | null>(null);
   const [likedAmount, setLikedAmount] = useState<number>(0);
   const [liked, setLiked] = useState<boolean>(false);
   const user = useAppSelector(selectUser);
