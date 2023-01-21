@@ -32,6 +32,6 @@
         width: 30%;
         padding-top: 3em;
         opacity: .3;
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.835));
+        filter: var(--iconShadow404);
     }
 }
