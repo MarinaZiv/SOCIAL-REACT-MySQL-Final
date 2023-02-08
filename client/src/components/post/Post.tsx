@@ -130,6 +130,7 @@ export const Post = ({ post }: PostProps) => {
         {commentOpen && (
           <Comments
             postId={post.id}
+            postUserId={post.userId}
             commentAmount={commentAmount}
             setCommentAmount={setCommentAmount}
           />
