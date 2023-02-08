@@ -118,12 +118,19 @@ export const Profile = () => {
             {userId === user.id ? (
               <button onClick={() => setOpenUpdate(true)}>update</button>
             ) : (
-              <button onClick={handleFollow}>
+              <>
                 {" "}
-                {followerUserId === user.id && following === true
-                  ? "Following"
-                  : "Follow"}{" "}
-              </button>
+                {followerUserId === user.id && following === true ? (
+                  <button
+                    onClick={handleFollow}
+                    style={{ backgroundColor: "seagreen" }}
+                  >
+                    Following
+                  </button>
+                ) : (
+                  <button onClick={handleFollow}>Follow</button>
+                )}
+              </>
             )}
           </div>
           <div className="right">
