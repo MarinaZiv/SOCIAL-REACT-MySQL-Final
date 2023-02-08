@@ -8,12 +8,14 @@ import moment from "moment";
 
 interface CommentProps {
   postId: any;
+  postUserId: number | null;
   commentAmount: number | null;
   setCommentAmount: Function;
 }
 
 export const Comments = ({
   postId,
+  postUserId,
   commentAmount,
   setCommentAmount,
 }: CommentProps) => {
@@ -30,7 +32,6 @@ export const Comments = ({
         );
         dispatch(updateComments(data.data));
         setCommentAmount(data.data.length);
-        console.log("data from getComment - Comments:", data.data);
       } catch (error) {
         console.error(error);
       }
@@ -50,17 +51,19 @@ export const Comments = ({
 
   return (
     <div className="comments">
-      <div className="write">
-        <img src={user.profilePic} alt="" />
-        <input
-          className="input"
-          type="text"
-          name="description"
-          placeholder="write a comment"
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <button onClick={handleSubmitComment}>Send</button>
-      </div>
+      {postUserId !== user.id && (
+        <div className="write">
+          <img src={user.profilePic} alt="" />
+          <input
+            className="input"
+            type="text"
+            name="description"
+            placeholder="write a comment"
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <button onClick={handleSubmitComment}>Send</button>
+        </div>
+      )}
 
       {comments.map((comment: CommentInterface) => (
         <div className="comment" key={comment.id}>
