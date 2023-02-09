@@ -15,6 +15,8 @@ import LanguageIcon from "@mui/icons-material/Language";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
+import { BsWhatsapp } from "react-icons/bs";
+
 
 export const Profile = () => {
   const [openUpdate, setOpenUpdate] = useState(false);
@@ -134,6 +136,10 @@ export const Profile = () => {
             )}
           </div>
           <div className="right">
+            <a
+              href="https://web.whatsapp.com//send?phone+972526501177" target="_bliank" >
+              <BsWhatsapp />
+            </a>
             <ForumOutlinedIcon />
             <a href="mailto:marinaziv4@gmail.com" target="_bliank">
               <EmailOutlinedIcon />
