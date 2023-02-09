@@ -96,8 +96,13 @@ export const Post = ({ post }: PostProps) => {
               <span className="date">{moment(post.createdAt).fromNow()}</span>
             </div>
           </div>
-            <MoreHorizIcon className="moreIcon" onClick={() => setMenuOpen(!menuOpen)} />
-           { menuOpen && post.userId === user.id && <button onClick={() => handleDeletePost(post.id)}>Delete</button>}
+          <MoreHorizIcon
+            className="moreIcon"
+            onClick={() => setMenuOpen(!menuOpen)}
+          />
+          {menuOpen && post.userId === user.id && (
+            <button onClick={() => handleDeletePost(post.id)}>Delete</button>
+          )}
         </div>
 
         <div className="content">
@@ -105,14 +110,22 @@ export const Post = ({ post }: PostProps) => {
           <img src={post.img} alt="" />
         </div>
         <div className="info">
-          <div className="item">
-            {likedAmount  && user.id ? (
-              <FavoriteOutlinedIcon className="like" onClick={handleLike} />
-            ) : (
-              <FavoriteBorderOutlinedIcon onClick={handleLike} />
-            )}
-            {likedAmount} likes
-          </div>
+          {post.userId !== user.id ? (
+            <div className="item">
+              {likedAmount && user.id ? (
+                <FavoriteOutlinedIcon className="like" onClick={handleLike} />
+              ) : (
+                <FavoriteBorderOutlinedIcon onClick={handleLike} />
+              )}
+              {likedAmount} likes
+            </div>
+          ) : (
+            <FavoriteOutlinedIcon
+              className="like"
+              onClick={handleLike}
+              style={{ cursor: "disable" }}
+            />
+          )}
 
           <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
             {commentAmount ? (
