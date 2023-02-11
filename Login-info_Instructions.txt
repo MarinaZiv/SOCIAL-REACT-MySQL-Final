@@ -1,0 +1,31 @@
+1. Login with Marina Ziv to get more interaction with other users`s posts.
+2. Navbar (left) --> title & home icon -> lead to the Home page.
+3. Navbar (left) --> dark / light theme switch, saved on Local Storage.
+4. Navbar (right) --> logout icon & current user image icon with name -> lead to the Profile page.
+5. Home page renders only the current user's following users post. If unfollow user, his posts woun`t be displayed.
+6. Creating a new post on the Home page by writhing post`s describtion on 'What`s on your mind?' input and
+   adding an image by clicking on the image icon ( or just some post`s text / or just an image ) + Share btn.
+7. Ability to delete only your own post. 
+8. Ability to like and leave a comment only to others users posts.
+9. Get to the Profile page by clicking on the user`s icon or name. 
+10. There are only profile user's posts on the Profile page.
+11. Ability to follow or unfollow a user from the Profile page.
+12. Ability to update current user (image, email, name, city, website)
+13. Ability to send whatsapp message and email ( only to Marina Ziv )
+
+
+Marina Ziv
+ziv@ziv.com
+ziv
+
+Jack Nicholson
+j@j.com
+j
+
+Bob Marley
+b@b.com
+b
+
+Jeff Bridges
+jeff@jeff.com
+j
